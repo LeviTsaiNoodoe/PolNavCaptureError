@@ -19,22 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="T57-Hf-6SX">
-                                <rect key="frame" x="127" y="267" width="121" height="29"/>
+                                <rect key="frame" x="144" y="267" width="87" height="29"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="start"/>
+                                    <segment title="stop"/>
                                 </segments>
                                 <connections>
                                     <action selector="simulate:" destination="BYZ-38-t0r" eventType="valueChanged" id="hLc-pQ-vDr"/>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkI-FC-t8L">
-                                <rect key="frame" x="170" y="189" width="34" height="30"/>
+                                <rect key="frame" x="167" y="189" width="40" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="wI3-7y-vc1"/>
                                 </constraints>
-                                <state key="normal" title="Start">
+                                <state key="normal" title="Route">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
