@@ -4,6 +4,13 @@
 
 #import <UIKit/UIKit.h>
 
+//update
+#import "FtsResultData.h"
+#import "PolnavIntersectionData.h"
+
+//update 9/9
+#import "PolnavColorData.h"
+
 //update 8/30
 #import "PolnavPoiData.h"
 #import "PolnavPoiType.h"
@@ -24,3 +31,10 @@
 #import "PolnavPointRecord.h"
 #import "PolnavSDKShell.h"
 #import "PolnavViewController.h"
+
+
+//update 8/15
+//#import <PolnavSDKShell.h>
+//#import <PolnavViewController.h>
+
+

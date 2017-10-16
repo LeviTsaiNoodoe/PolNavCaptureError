@@ -30,7 +30,7 @@
 //POI的圖示
 @property (nonatomic) UIImage *icon;
 //顯示點經緯度座標
-@property (nonatomic) LocationCoordinate *showLocation;
+@property (nonatomic) LocationCoordinate *shownLocation;
 //導航點經緯度座標
 @property (nonatomic) LocationCoordinate *routedLocation;
 
@@ -44,7 +44,7 @@
  * @param icon POI的圖示
  * @param distance 距離
  * @param formatDistance 格式化過的距離
- * @param showLocation 顯示點經緯度座標
+ * @param shownLocation 顯示點經緯度座標
  * @param routedLocation 導航點經緯度座標
  * @return 生成PolnavPoiData結構資料
  */
@@ -57,7 +57,7 @@
                         icon:(UIImage *)icon
                     distance:(NSInteger)distance
               formatDistance:(CommonValueUnit *)formatDistance
-                showLocation:(LocationCoordinate *)showLocation
+                shownLocation:(LocationCoordinate *)shownLocation
               routedLocation:(LocationCoordinate *)routedLocation;
 
 @end

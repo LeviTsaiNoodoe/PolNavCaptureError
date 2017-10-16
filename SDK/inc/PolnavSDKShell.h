@@ -15,10 +15,11 @@
 @class PolnavPointRecord;
 @class TurnInfoData;
 @class PolnavPoiData;
-@class FtsQueryData;
+@class FtsResultData;
 @class NaviMatrixData;
 @class CaptureData;
 @class MapGeocoding;
+@class PolnavIntersectionData;
 
 typedef NS_ENUM(NSUInteger, CaptureType);
 
@@ -28,6 +29,12 @@ typedef NS_ENUM(NSUInteger, MapMode) {
     MapModeNaviViewHeadingUp2D = 1,    //導航2D車頭向上
     MapModeNaviViewHeadingUp3D = 2,    //導航3D車頭向上
     MapModeMapView = 3,                //地圖顯示模式
+};
+
+//規劃方式
+typedef NS_ENUM(NSUInteger, RoutePriority) {
+    RoutePriorityDistanceFirst,     //距離優先
+    RoutePriorityTimeFirst,         //時間優先
 };
 
 //日夜間顯示模式
@@ -58,8 +65,9 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
     VoiceLanguageTaiwanese,         //台語
     VoiceLanguageHakkaFourCountries,//客語四縣
     VoiceLanguageHakkaHoiLiuk,      //客語海陸
-    VoiceLanguageDutch,             //波蘭語
+    VoiceLanguageDutch,             //荷蘭語
     VoiceLanguagePersian,           //波斯語
+    VoiceLanguageItaliano,          //義大利語
 };
 
 @interface PolnavSDKShell : NSObject
@@ -137,8 +145,11 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
  * @return MapGeocoding GeoCode反查結果資料結構
  */
 + (MapGeocoding *)mapGeocodingWithLocation:(LocationCoordinate *)location;
-
-#pragma mark - B
+/*
+ * @brief 判斷地圖顯示是否為日間模式
+ */
++ (BOOL)mapIsDayMode;
+#pragma mark - B. Navi
 /*
  * @brief 設定行程並規劃路徑
  * @param startLocation 起始點經緯度。如果起始點是目前所在地，則該值為nil
@@ -209,7 +220,7 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
  */
 + (BOOL)canRouteWithLocation:(LocationCoordinate *)location;
 
-#pragma mark - C3. About Config
+#pragma mark - C. About Config
 /*
  * @brief 設定日夜間顯示模式
  * @param mode 日夜間顯示模式
@@ -230,6 +241,24 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
  * @param language 語音語言
  */
 + (BOOL)configVoiceLanguage:(VoiceLanguage)language;
+/*
+ * @brief 設定導航路徑規劃參數
+ * @param routePriorty 規劃方式
+ * @param isAvoidHighway 是否避開高速公路
+ * @param isAvoidTollway 是否避開收費道路
+ * @param isAvoidTrail 是否避開小路
+ * @param isAvoidFerry 是否避開水路
+ */
++ (void)configRouteOptionWithRoutePriorty:(RoutePriority)routePriorty
+                           isAvoidHighway:(BOOL)isAvoidHighway
+                           isAvoidTollway:(BOOL)isAvoidTollway
+                             isAvoidTrail:(BOOL)isAvoidTrail
+                             isAvoidFerry:(BOOL)isAvoidFerry;
+/*
+ * @brief 設定道路文字大小
+ * @param textRatio 文字大小
+ */
++ (void)configMapStreetTextRatio:(CGFloat)textRatio;
 
 #pragma mark - D. Capture
 /*
@@ -240,7 +269,12 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
  * @param isShowLabel 是否顯示道路名稱
  * @param isShowPOI 是否顯示POI
  * @param isShowOneWay 是否顯示單行道符號
+ * @param isShowSpeedCamera 是否顯示測速照相機
+ * @param isShowCar 是否顯示車標
  * @param junctionIndex 要擷取第幾個Turn的JunctionView。junctionIndex參數只對JunctionView有效，同時也不可以超過Turn的數量，否則會回傳null Image
+ * @param color 指定junctionView轉彎箭頭顏色
+ * @param junctionDistance 預測車子可能在junction前方N公尺。若設為0代表使用舊版的截圖方式。
+ * @param dayNightMode 指定截圖的日夜間模式。dayNightMode的設定值同API: configDayNightMode。輸入DayNightModeAuto代表截圖的日夜間同地圖顯示的模式。
  * @return data 截取畫面的CaptureData資料
  * @return error 錯誤訊息
  */
@@ -250,7 +284,12 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
                      isShowLabel:(BOOL)isShowLabel
                        isShowPOI:(BOOL)isShowPOI
                     isShowOneWay:(BOOL)isShowOneWay
+               isShowSpeedCamera:(BOOL)isShowSpeedCamera
+                       isShowCar:(BOOL)isShowCar
                    junctionIndex:(NSUInteger)junctionIndex
+                   junctionColor:(UIColor *)color
+                junctionDistance:(NSInteger)junctionDistance
+                    dayNightMode:(DayNightMode)dayNightMode
                   captureHandler:(void (^)(CaptureData *data, NSError *error))completionBlock;
 /*
  * @brief 將特定經緯度轉換成某張圖上的座標點
@@ -270,13 +309,33 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
  * @return Nearby POI數量
  */
 + (NSUInteger)nearbyPoiDataCount:(LocationCoordinate *)location
-                    categoryList:(NSArray<NSNumber *>*)categoryList;
+                    categoryList:(NSArray *)categoryList;
 /*
  * @brief 取得該某一筆POI的詳細資料
  * @param index 座標點
  * @return PolnavPoiData POI相關資訊資料結構
  */
 + (PolnavPoiData *)nearbyPoiDataAtIndex:(NSUInteger)index;
+
+
+#pragma mark FTS Search
+//取得已安裝地圖的國家名稱清單
++ (NSMutableArray *)countries;
+//設定FTS搜尋的國家
++ (void)selectCountryAtIndex:(NSUInteger)index;
+/*
+ * @brief 輸入搜尋字串進行搜尋
+ * @param keyWord 搜尋字串
+ */
++ (void)ftsRequestWithKeyWord:(NSString *)keyWord ftsHandler:(void (^)(void))completionBlock;
+//取出搜尋結果筆數
++ (NSUInteger)ftsResultDataCount;
+//上述API執行後，進一步取得某一筆資料的詳細資訊
++ (FtsResultData *)ftsResultDataAtIndex:(NSUInteger)index;
+//若搜尋結果的類別是Street的話，可用此API查詢是否有其他道路和此道路相連成為交叉路口，並取出交叉路口的數量。
++ (NSUInteger)ftsIntersectionCountAtIndex:(NSUInteger)index;
+//上述API執行後，進一步取得某一筆交叉路口的詳細資訊
++ (PolnavIntersectionData *)ftsIntersectionDataAtIndex:(NSUInteger)index;
 
 @end
 
