@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak fileprivate var upperImageView: UIImageView!
     
-    var junctions = [(String,UIImage, String)]()
+//    var junctions = [(String,UIImage, String)]()
     
     
     
@@ -59,7 +59,12 @@ class ViewController: UIViewController {
         PolnavSDKShell.doRoute(withStartLocation: start, destinations: points)
     }
     
-    fileprivate func addCustomIcon( image: UIImage, location: CGPoint) -> UIImage? {
+    fileprivate func addCustomIcon( _image: UIImage?, location: CGPoint) -> UIImage? {
+        
+        guard let image = _image else {
+            return nil
+        }
+        
         
         return autoreleasepool(invoking: { () -> UIImage? in
             
@@ -88,69 +93,120 @@ class ViewController: UIViewController {
 
 extension ViewController: PolnavRouteDelegate {
     
-    fileprivate func getJunction3DView() -> [(String,UIImage, String)] {
-        var NDBlue = UIColor(red: 0x1D/255.0, green: 0x86/255.0, blue: 0xE3/255.0, alpha: 1)
-        var NDRed = UIColor(red: 0xE3/255.0, green: 0x09/255.0, blue: 0x14/255.0, alpha: 1)
-        var count = 0
-        
-        
-        DispatchQueue.main.sync {
-            count = PolnavSDKShell.turnInfoCount()
-        }
-        
-        
-        var array = [(String,UIImage, String)]()
-        
-        
+//    fileprivate func getJunction3DView() -> [(String,UIImage, String)] {
+//        var NDBlue = UIColor(red: 0x1D/255.0, green: 0x86/255.0, blue: 0xE3/255.0, alpha: 1)
+//        var NDRed = UIColor(red: 0xE3/255.0, green: 0x09/255.0, blue: 0x14/255.0, alpha: 1)
+//        var count = 0
+//
+//
+//        DispatchQueue.main.sync {
+//            count = PolnavSDKShell.turnInfoCount()
+//        }
+//
+//
+//        var array = [(String,UIImage, String)]()
+//
+//
+//
+//        let condition = NSCondition()
+//        var predicate = true
+//
+//        for _index in 0 ..< count {
+//            condition.lock()
+//            predicate = true
+//            DispatchQueue.main.sync {
+//                PolnavSDKShell.captureNaviImage(with: CaptureType.juntionView3D, imageSize: CGSize(width: 265, height: 265),
+//                                                zoomScale: 0,
+//                                                isShowLabel: false,
+//                                                isShowPOI: false,
+//                                                isShowOneWay: false,
+//                                                isShowSpeedCamera: false,
+//                                                isShowCar: false,
+//                                                junctionIndex: UInt(_index),
+//                                                junctionColor: NDRed,
+//                                                junctionDistance: 500,
+//                                                dayNightMode: .auto,
+//                                                captureHandler: { (data, error) in
+//
+//                                                    condition.lock()
+//                                                    defer{
+//                                                        predicate = false
+//                                                        condition.signal()
+//                                                        condition.unlock()
+//                                                    }
+//
+//                                                    array.append((data!.turnSignature, data!.capturedImage, data!.imageAttributeDescription))
+//                })
+//            }
+//
+//            while predicate {
+//                condition.wait()
+//            }
+//
+//            condition.unlock()
+//
+//        }
+//
+//        return array
+//
+//    }
+    
+    
+    func getJunction3DView1() -> ( String?, UIImage?, String?)  {
         
         let condition = NSCondition()
         var predicate = true
         
-        for _index in 0 ..< count {
-            condition.lock()
-            predicate = true
-            DispatchQueue.main.sync {
-                PolnavSDKShell.captureNaviImage(with: CaptureType.juntionView3D, imageSize: CGSize(width: 265, height: 265),
-                                                zoomScale: 0,
-                                                isShowLabel: false,
-                                                isShowPOI: false,
-                                                isShowOneWay: false,
-                                                isShowSpeedCamera: false,
-                                                isShowCar: false,
-                                                junctionIndex: UInt(_index),
-                                                junctionColor: NDRed,
-                                                junctionDistance: 500,
-                                                dayNightMode: .auto,
-                                                captureHandler: { (data, error) in
-                                                    
-                                                    condition.lock()
-                                                    defer{
-                                                        predicate = false
-                                                        condition.signal()
-                                                        condition.unlock()
-                                                    }
-                                                    
-                                                    array.append((data!.turnSignature, data!.capturedImage, data!.imageAttributeDescription))
-                })
-            }
-            
-            while predicate {
-                condition.wait()
-            }
-            
-            condition.unlock()
-            
+        var sig: String?
+        var image: UIImage?
+        var des: String?
+        
+        
+        DispatchQueue.main.sync {
+            PolnavSDKShell.captureNaviImage(with: CaptureType.juntionView3D, imageSize: CGSize(width: 265, height: 265),
+                                            zoomScale: 0,
+                                            isShowLabel: false,
+                                            isShowPOI: false,
+                                            isShowOneWay: false,
+                                            isShowSpeedCamera: false,
+                                            isShowCar: false,
+                                            junctionIndex: 0,
+                                            junctionColor: UIColor.yellow,
+                                            junctionDistance: 100,
+                                            dayNightMode: .auto,
+                                            captureHandler: { (data, error) in
+                                                
+                                                condition.lock()
+                                                defer{
+                                                    predicate = false
+                                                    condition.signal()
+                                                    condition.unlock()
+                                                }
+                                                
+                                                sig = data?.turnSignature
+                                                image = data?.capturedImage
+                                                des = data?.imageAttributeDescription
+                                                
+            })
         }
         
-        return array
+        while predicate {
+            condition.wait()
+        }
         
+        condition.unlock()
+        
+        
+        
+        return (sig, image, des)
     }
+    
     
     // Mark PolnavRouteDelegate
     func onRoutingCalculateFinish() {
         print("onRoutingCalculateFinish")
         DispatchQueue.global().async {
-            self.junctions = self.getJunction3DView()
+//            self.junctions = self.getJunction3DView()
             
             DispatchQueue.main.sync {
                 PolnavSDKShell.startSimulate()
@@ -170,10 +226,16 @@ extension ViewController: PolnavRouteDelegate {
                         nav = PolnavSDKShell.naviMatrixData()
                     }
                     
-                    let (sig, image, des) = self.junctions.first(where: { (arg0) -> Bool in
-                        let (turn, image, des) = arg0
-                        return nav.nextTurnInfoData.signature == turn
-                    })!
+//                    let (sig, image, des) = self.junctions.first(where: { (arg0) -> Bool in
+//                        let (turn, image, des) = arg0
+//                        return nav.nextTurnInfoData.signature == turn
+//                    })!
+                    
+                    
+                    
+                    let (sig, image, des) = self.getJunction3DView1()
+                    
+                    
                     
                     var p: PolnavPoint?
                     
@@ -183,7 +245,7 @@ extension ViewController: PolnavRouteDelegate {
                                                              contextAttr: des as! String)
                     }
                     
-                    let i = self.addCustomIcon(image: image, location: CGPoint(x: (p?.x)!, y: (p?.y)!))
+                    let i = self.addCustomIcon(_image: image, location: CGPoint(x: (p?.x)!, y: (p?.y)!))
                     
                     DispatchQueue.main.sync {
                         self.upperImageView.image = i
