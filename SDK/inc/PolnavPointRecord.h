@@ -26,7 +26,7 @@ typedef NS_ENUM(NSUInteger, PolnavPointRecordType) {
 //選取的物件相關資料結構
 @interface PolnavPointRecord : NSObject
 //顯示點經緯度座標
-@property (nonatomic) LocationCoordinate *showLocation;
+@property (nonatomic) LocationCoordinate *shownLocation;
 //導航點經緯度座標
 @property (nonatomic) LocationCoordinate *routedLocation;
 //物件的類型
@@ -50,7 +50,7 @@ typedef NS_ENUM(NSUInteger, PolnavPointRecordType) {
  * @brief 根據選取的物件相關資料生成PolnavPointRecord結構資料
  * @param type 物件的類型
  * @param name 名稱
- * @param showLocation 顯示點經緯度座標
+ * @param shownLocation 顯示點經緯度座標
  * @param routedLocation 導航點經緯度座標
  * @param countryName 國家名稱
  * @param cityName 城市名稱
@@ -62,7 +62,7 @@ typedef NS_ENUM(NSUInteger, PolnavPointRecordType) {
  */
 - (instancetype)initWithType:(PolnavPointRecordType)type
                         name:(NSString *)name
-                showLocation:(LocationCoordinate *)showLocation
+                shownLocation:(LocationCoordinate *)shownLocation
               routedLocation:(LocationCoordinate *)routedLocation
                  countryName:(NSString *)countryName
                     cityName:(NSString *)cityName
