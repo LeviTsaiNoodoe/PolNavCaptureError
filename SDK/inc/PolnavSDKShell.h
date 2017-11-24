@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "PolnavStructData.h"
-#import "PolnavPOIType.h"
+#import "PolnavPoiCategory.h"
 
 @protocol PolnavRouteDelegate;
+@protocol PolnavLicenseDelegate;
+
 @class PolnavPointRecord;
 @class TurnInfoData;
 @class PolnavPoiData;
@@ -20,6 +22,11 @@
 @class CaptureData;
 @class MapGeocoding;
 @class PolnavIntersectionData;
+
+@class ProductInfoData;
+@class MapInfoData;
+@class VoiceInfoData;
+@class MapExpiredData;
 
 typedef NS_ENUM(NSUInteger, CaptureType);
 
@@ -70,10 +77,16 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
     VoiceLanguageItaliano,          //義大利語
 };
 
-@interface PolnavSDKShell : NSObject
+//SDK init 狀態類型
+typedef NS_ENUM(NSUInteger, SDKInitStatus) {
+    SDKInitStatusErrorPolnavMobileFolderNotExist = 99,  //PolnavMobile資料夾不存在正確位置
+    SDKInitStatusErrorWriteProtect = 100,               //儲存裝置處於防寫狀態
+    SDKInitStatusErrorVirtualMemoryNotEnough = 102,     //虛擬記憶體不足
+    SDKInitStatusErrorNoMap = 103,                      //無法打開地圖(可能是Map資料夾或BaseMap不存在)
+    SDKInitStatusSuccess = 109,                         //初始化成功
+};
 
-//圖資檔案位置
-@property (nonatomic, copy, class) NSString *resourcePath;
+@interface PolnavSDKShell : NSObject
 
 #pragma mark - ***** A. About Polnav Map *****
 /*
@@ -155,6 +168,12 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
  * @param displacement 位移量
  */
 + (void)panMapWithDisplacement:(CGVector)displacement;
+/*
+ * @brief 將裝置座標換算成經緯度
+ * @param devicePoint 裝置座標
+ * @return LocationCoordinate 經緯度座標
+ */
++ (LocationCoordinate *)getLocationCoordinateWithDevicePoint:(CGPoint)devicePoint;
 
 #pragma mark - B. Navi
 /*
@@ -215,7 +234,7 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
  * @param index 轉彎資訊陣列的index值
  * @return TurnInfoData 轉彎相關資訊資料結構
  */
-+ (TurnInfoData *)turnDataAtIndex:(int)index;
++ (TurnInfoData *)turnDataAtIndex:(NSUInteger)index;
 /*
  * @brief 取得導航相關資訊
  * @return NaviMatrixData 導航相關資訊資料結構
@@ -266,6 +285,20 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
  * @param textRatio 文字大小
  */
 + (void)configMapStreetTextRatio:(CGFloat)textRatio;
+/*
+ * @brief 設定是否顯示起點/中途點/終點
+ * @param drawStartPoint 是否顯示起點
+ * @param drawWayPoint 是否顯示中途點
+ * @param drawDestination 是否顯示終點
+ */
++ (void)configMapDrawItineraryWithDrawStartPoint:(BOOL)drawStartPoint
+                                    drawWayPoint:(BOOL)drawWayPoint
+                                 drawDestination:(BOOL)drawDestination;
+/*
+ * @brief 設定地圖只顯示某些POI類別
+ * @param categories POI類別 (categories傳nil，表示開啟全部POI類別)
+ */
++ (void)configPoiShowOnMapWithPoiCategories:(NSArray *)categories;
 
 #pragma mark - D. Capture
 /*
@@ -282,6 +315,9 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
  * @param color 指定junctionView轉彎箭頭顏色
  * @param junctionDistance 預測車子可能在junction前方N公尺。若設為0代表使用舊版的截圖方式。
  * @param dayNightMode 指定截圖的日夜間模式。dayNightMode的設定值同API: configDayNightMode。輸入DayNightModeAuto代表截圖的日夜間同地圖顯示的模式。
+ * @param turnWidthRatio 設定轉彎箭頭寬度大小
+ * @param isEnableVerbose 是否顯示debug log
+ * @param bestfitBorderPercent 設定BestfitView截圖內縮比例
  * @return data 截取畫面的CaptureData資料
  * @return error 錯誤訊息
  */
@@ -297,6 +333,9 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
                    junctionColor:(UIColor *)color
                 junctionDistance:(NSInteger)junctionDistance
                     dayNightMode:(DayNightMode)dayNightMode
+                  turnWidthRatio:(CGFloat)turnWidthRatio
+                 isEnableVerbose:(BOOL)isEnableVerbose
+            bestfitBorderPercent:(CGFloat)bestfitBorderPercent
                   captureHandler:(void (^)(CaptureData *data, NSError *error))completionBlock;
 /*
  * @brief 將特定經緯度轉換成某張圖上的座標點
@@ -307,7 +346,6 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
 + (PolnavPoint *)transformLocationToCapturedImagePosition:(LocationCoordinate *)location
                                               contextAttr:(NSString *)contextAttr;
 
-#pragma mark - About Search
 #pragma mark Nearby Search
 /*
  * @brief 取得指定類別(或全部)的Nearby POI數量(可複選)。筆數最多回傳300筆，如果categoryList為nil，代表搜尋所有類別
@@ -344,5 +382,60 @@ typedef NS_ENUM(NSUInteger, VoiceLanguage) {
 //上述API執行後，進一步取得某一筆交叉路口的詳細資訊
 + (PolnavIntersectionData *)ftsIntersectionDataAtIndex:(NSUInteger)index;
 
+#pragma mark - ***** G. About License  *****
+/*
+ * @brief 新增PolnavLicenseDelegate協議
+ * @param delegate 通知更新與安裝授權完成的 PolnavLicenseDelegate
+ */
++ (void)addLicenseDelegate:(id<PolnavLicenseDelegate>)delegate;
+/*
+ * @brief 移除PolnavLicenseDelegate協議
+ * @param delegate 通知更新與安裝授權完成的 PolnavLicenseDelegate
+ */
++ (void)removeLicenseDelegate:(id<PolnavLicenseDelegate>)delegate;
+/*
+ * @brief 更新Product/Map/Voice相關資訊，才能知道是否有新版Release
+ */
++ (void)updateProductMapVoiceInfo;
+/*
+ * @brief 安裝指定地圖的授權Key
+ * @param mapName 地圖名稱
+ * @param mapCode 地圖版本
+ * @param reason 安裝原因;reason請Noodoe定義，原則是一個英文單字，請勿填寫空白與特殊字元
+ */
++ (void)installLicenseKeyWithMapName:(NSString *)mapName mapCode:(NSString *)mapCode reason:(NSString *)reason;
+/*
+ * @brief 取得產品清單
+ */
++ (NSMutableArray<ProductInfoData *> *)productInfoList;
+/*
+ * @brief 取得地圖檔清單
+ */
++ (NSMutableArray<MapInfoData *> *)mapInfoList;
+/*
+ * @brief 取得聲音檔清單
+ */
++ (NSMutableArray<VoiceInfoData *> *)voiceInfoList;
+/*
+ * @brief 取得地圖檔下載的Server URL
+ */
++ (NSString *)mapFileServerURL;
+/*
+ * @brief 取得聲音檔下載的Server URL
+ */
++ (NSString *)voiceFileServerURL;
+
+#pragma mark - SDK init Status
+/*
+ * @brief 初始化設定Init Method
+ * @param resourcePath 圖資檔案位置路徑
+ * @param noodoeUUID noodoe識別碼
+ * @param phoneID 手機識別碼
+ * @return SDKInitStatus SDK init 狀態類型
+ */
++ (SDKInitStatus)startWithResourcePath:(NSString *)resourcePath
+                            noodoeUUID:(NSString *)noodoeUUID
+                               phoneID:(NSString *)phoneID
+                        mapExpiredList:(NSMutableArray<MapExpiredData *> *)mapExpiredList;
 @end
 

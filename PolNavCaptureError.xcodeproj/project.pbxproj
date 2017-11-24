@@ -19,10 +19,8 @@
 		8E43573E1F5CFE030000C8AD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E43573D1F5CFE030000C8AD /* AVFoundation.framework */; };
 		8E4357401F5CFE0D0000C8AD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E43573F1F5CFE0D0000C8AD /* AudioToolbox.framework */; };
 		8E43575C1F5CFEB80000C8AD /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E43575B1F5CFEB80000C8AD /* libstdc++.6.tbd */; };
-		8E76ECA61FA183AB00BA018F /* libPolnavNativeSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E76ECA11FA183AB00BA018F /* libPolnavNativeSdk.a */; };
-		8E76ECA71FA183AB00BA018F /* libPolnavSDKShell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E76ECA21FA183AB00BA018F /* libPolnavSDKShell.a */; };
-		8E76ECA81FA183AB00BA018F /* libPolnavNativeSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E76ECA41FA183AB00BA018F /* libPolnavNativeSdk.a */; };
-		8E76ECA91FA183AB00BA018F /* libPolnavSDKShell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E76ECA51FA183AB00BA018F /* libPolnavSDKShell.a */; };
+		8EEB04271FBAF52C00F26E27 /* libPolnavNativeSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEB041B1FBAE52F00F26E27 /* libPolnavNativeSdk.a */; };
+		8EEB04281FBAF52C00F26E27 /* libPolnavSDKShell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EEB041C1FBAE52F00F26E27 /* libPolnavSDKShell.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +66,6 @@
 		8E4357501F5CFE7E0000C8AD /* NextTurnCrossInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextTurnCrossInfoData.h; sourceTree = "<group>"; };
 		8E4357511F5CFE7E0000C8AD /* PolnavPoiData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavPoiData.h; sourceTree = "<group>"; };
 		8E4357521F5CFE7E0000C8AD /* PolnavPointRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavPointRecord.h; sourceTree = "<group>"; };
-		8E4357531F5CFE7E0000C8AD /* PolnavPOIType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavPOIType.h; sourceTree = "<group>"; };
 		8E4357541F5CFE7E0000C8AD /* PolnavRouteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavRouteDelegate.h; sourceTree = "<group>"; };
 		8E4357551F5CFE7E0000C8AD /* PolnavSDKShell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavSDKShell.h; sourceTree = "<group>"; };
 		8E4357561F5CFE7E0000C8AD /* PolnavStructData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavStructData.h; sourceTree = "<group>"; };
@@ -80,10 +77,16 @@
 		8E76EC9C1FA1838C00BA018F /* PolnavColorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavColorData.h; sourceTree = "<group>"; };
 		8E76EC9D1FA1838C00BA018F /* FtsResultData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtsResultData.h; sourceTree = "<group>"; };
 		8E76EC9E1FA1838C00BA018F /* PolnavIntersectionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavIntersectionData.h; sourceTree = "<group>"; };
-		8E76ECA11FA183AB00BA018F /* libPolnavNativeSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPolnavNativeSdk.a; sourceTree = "<group>"; };
-		8E76ECA21FA183AB00BA018F /* libPolnavSDKShell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPolnavSDKShell.a; sourceTree = "<group>"; };
-		8E76ECA41FA183AB00BA018F /* libPolnavNativeSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPolnavNativeSdk.a; sourceTree = "<group>"; };
-		8E76ECA51FA183AB00BA018F /* libPolnavSDKShell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPolnavSDKShell.a; sourceTree = "<group>"; };
+		8EAEF5E61FC815DE00779B10 /* VoiceInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceInfoData.h; sourceTree = "<group>"; };
+		8EAEF5E71FC815DE00779B10 /* PolnavLicenseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavLicenseDelegate.h; sourceTree = "<group>"; };
+		8EAEF5E81FC815DE00779B10 /* MapExpiredData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapExpiredData.h; sourceTree = "<group>"; };
+		8EAEF5E91FC815DE00779B10 /* MapInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInfoData.h; sourceTree = "<group>"; };
+		8EAEF5EA1FC815DE00779B10 /* ProductInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductInfoData.h; sourceTree = "<group>"; };
+		8EEB04151FBAE51A00F26E27 /* PolnavPoiCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavPoiCategory.h; sourceTree = "<group>"; };
+		8EEB04181FBAE52F00F26E27 /* libPolnavNativeSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPolnavNativeSdk.a; sourceTree = "<group>"; };
+		8EEB04191FBAE52F00F26E27 /* libPolnavSDKShell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPolnavSDKShell.a; sourceTree = "<group>"; };
+		8EEB041B1FBAE52F00F26E27 /* libPolnavNativeSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPolnavNativeSdk.a; sourceTree = "<group>"; };
+		8EEB041C1FBAE52F00F26E27 /* libPolnavSDKShell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPolnavSDKShell.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +97,10 @@
 				8E43575C1F5CFEB80000C8AD /* libstdc++.6.tbd in Frameworks */,
 				8E4357401F5CFE0D0000C8AD /* AudioToolbox.framework in Frameworks */,
 				8E43573E1F5CFE030000C8AD /* AVFoundation.framework in Frameworks */,
-				8E76ECA81FA183AB00BA018F /* libPolnavNativeSdk.a in Frameworks */,
 				8E43573C1F5CFDFB0000C8AD /* OpenAL.framework in Frameworks */,
-				8E76ECA71FA183AB00BA018F /* libPolnavSDKShell.a in Frameworks */,
+				8EEB04271FBAF52C00F26E27 /* libPolnavNativeSdk.a in Frameworks */,
+				8EEB04281FBAF52C00F26E27 /* libPolnavSDKShell.a in Frameworks */,
 				8E43573A1F5CFDF20000C8AD /* CoreLocation.framework in Frameworks */,
-				8E76ECA91FA183AB00BA018F /* libPolnavSDKShell.a in Frameworks */,
-				8E76ECA61FA183AB00BA018F /* libPolnavNativeSdk.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +178,7 @@
 		8E4357381F5CFDF20000C8AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8E76EC9F1FA183AB00BA018F /* lib */,
+				8EEB04161FBAE52F00F26E27 /* lib */,
 				8E43575B1F5CFEB80000C8AD /* libstdc++.6.tbd */,
 				8E43573F1F5CFE0D0000C8AD /* AudioToolbox.framework */,
 				8E43573D1F5CFE030000C8AD /* AVFoundation.framework */,
@@ -190,6 +191,12 @@
 		8E43574B1F5CFE7E0000C8AD /* inc */ = {
 			isa = PBXGroup;
 			children = (
+				8EAEF5E81FC815DE00779B10 /* MapExpiredData.h */,
+				8EAEF5E91FC815DE00779B10 /* MapInfoData.h */,
+				8EAEF5E71FC815DE00779B10 /* PolnavLicenseDelegate.h */,
+				8EAEF5EA1FC815DE00779B10 /* ProductInfoData.h */,
+				8EAEF5E61FC815DE00779B10 /* VoiceInfoData.h */,
+				8EEB04151FBAE51A00F26E27 /* PolnavPoiCategory.h */,
 				8E76EC9D1FA1838C00BA018F /* FtsResultData.h */,
 				8E76EC9C1FA1838C00BA018F /* PolnavColorData.h */,
 				8E76EC9E1FA1838C00BA018F /* PolnavIntersectionData.h */,
@@ -200,7 +207,6 @@
 				8E4357501F5CFE7E0000C8AD /* NextTurnCrossInfoData.h */,
 				8E4357511F5CFE7E0000C8AD /* PolnavPoiData.h */,
 				8E4357521F5CFE7E0000C8AD /* PolnavPointRecord.h */,
-				8E4357531F5CFE7E0000C8AD /* PolnavPOIType.h */,
 				8E4357541F5CFE7E0000C8AD /* PolnavRouteDelegate.h */,
 				8E4357551F5CFE7E0000C8AD /* PolnavSDKShell.h */,
 				8E4357561F5CFE7E0000C8AD /* PolnavStructData.h */,
@@ -213,30 +219,30 @@
 			path = SDK/inc;
 			sourceTree = "<group>";
 		};
-		8E76EC9F1FA183AB00BA018F /* lib */ = {
+		8EEB04161FBAE52F00F26E27 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				8E76ECA01FA183AB00BA018F /* Release-iphoneos */,
-				8E76ECA31FA183AB00BA018F /* Release-iphonesimulator */,
+				8EEB04171FBAE52F00F26E27 /* Release-iphoneos */,
+				8EEB041A1FBAE52F00F26E27 /* Release-iphonesimulator */,
 			);
 			name = lib;
 			path = SDK/lib;
 			sourceTree = "<group>";
 		};
-		8E76ECA01FA183AB00BA018F /* Release-iphoneos */ = {
+		8EEB04171FBAE52F00F26E27 /* Release-iphoneos */ = {
 			isa = PBXGroup;
 			children = (
-				8E76ECA11FA183AB00BA018F /* libPolnavNativeSdk.a */,
-				8E76ECA21FA183AB00BA018F /* libPolnavSDKShell.a */,
+				8EEB04181FBAE52F00F26E27 /* libPolnavNativeSdk.a */,
+				8EEB04191FBAE52F00F26E27 /* libPolnavSDKShell.a */,
 			);
 			path = "Release-iphoneos";
 			sourceTree = "<group>";
 		};
-		8E76ECA31FA183AB00BA018F /* Release-iphonesimulator */ = {
+		8EEB041A1FBAE52F00F26E27 /* Release-iphonesimulator */ = {
 			isa = PBXGroup;
 			children = (
-				8E76ECA41FA183AB00BA018F /* libPolnavNativeSdk.a */,
-				8E76ECA51FA183AB00BA018F /* libPolnavSDKShell.a */,
+				8EEB041B1FBAE52F00F26E27 /* libPolnavNativeSdk.a */,
+				8EEB041C1FBAE52F00F26E27 /* libPolnavSDKShell.a */,
 			);
 			path = "Release-iphonesimulator";
 			sourceTree = "<group>";
@@ -555,9 +561,7 @@
 				INFOPLIST_FILE = PolNavCaptureError/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/SDK/lib/Release-iphoneos",
-					"$(PROJECT_DIR)/SDK/lib/Release-iphoneos/$ARCHS",
 					"$(PROJECT_DIR)/SDK/lib/Release-iphonesimulator",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Levi.Example.swift.Test.PolNavCaptureError;
@@ -580,9 +584,7 @@
 				INFOPLIST_FILE = PolNavCaptureError/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/SDK/lib/Release-iphoneos",
-					"$(PROJECT_DIR)/SDK/lib/Release-iphoneos/$ARCHS",
 					"$(PROJECT_DIR)/SDK/lib/Release-iphonesimulator",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Levi.Example.swift.Test.PolNavCaptureError;

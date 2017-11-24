@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PolnavSDKShell.add(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -23,24 +22,13 @@ class ViewController: UIViewController {
     override var prefersStatusBarHidden: Bool{
         return true
     }
+    
+    @IBAction func unwindToNaviMapVC(segue: UIStoryboardSegue) {
+        
+        
+    }
+    
 }
 
-extension ViewController: PolnavRouteDelegate {
-    
-    // Mark PolnavRouteDelegate
-    func onRoutingCalculateFinish() {
-        print("onRoutingCalculateFinish")
-    }
-    
-    func onCalculateFailed(with index: Int) {
-        print("onCalculateFailed:\(index)")
-    }
-    
-    func onReachDestination(_ index: UInt) {
-        print("onReachDestination:\(index)")
-    }
-    
-    func onUpdateRoutingProgress(withProgress progress: Int) {
-        print("onUpdateRoutingProgress:\(progress)")
-    }
-}
+
+

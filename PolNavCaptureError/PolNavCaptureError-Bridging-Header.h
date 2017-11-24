@@ -4,6 +4,16 @@
 
 #import <UIKit/UIKit.h>
 
+//update 11/15
+#import "MapExpiredData.h"
+#import "MapInfoData.h"
+#import "PolnavLicenseDelegate.h"
+#import "ProductInfoData.h"
+#import "VoiceInfoData.h"
+
+//update 10/30
+#import "PolnavPoiCategory.h"
+
 //update
 #import "FtsResultData.h"
 #import "PolnavIntersectionData.h"
@@ -13,7 +23,7 @@
 
 //update 8/30
 #import "PolnavPoiData.h"
-#import "PolnavPoiType.h"
+//#import "PolnavPoiType.h"
 #import "MapGeocoding.h"
 
 //update 17/8/3

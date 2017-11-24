@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-//下個轉彎路口左右岔的資料結構
-@interface NextTurnCrossInfoData : NSObject
+
 //轉彎方向類型
 typedef NS_ENUM(NSInteger, TurnDirection) {
     TurnDirectionLeft = -1,         //左轉
@@ -16,6 +15,8 @@ typedef NS_ENUM(NSInteger, TurnDirection) {
     TurnDirectionStraight = 0,      //直走
 };
 
+//下個轉彎路口左右岔的資料結構
+@interface NextTurnCrossInfoData : NSObject
 //左岔路口個數
 @property (nonatomic, assign) NSInteger leftCrossNumber;
 //右岔路口個數
