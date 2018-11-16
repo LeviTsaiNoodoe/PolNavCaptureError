@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E85657B213CE90000A1397C /* NaviMatrixData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856457213CE8FF00A1397C /* NaviMatrixData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85657C213CE90000A1397C /* CaptureData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856458213CE8FF00A1397C /* CaptureData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85657D213CE90000A1397C /* NextTurnCrossInfoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856459213CE8FF00A1397C /* NextTurnCrossInfoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85657E213CE90000A1397C /* PolnavViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85645A213CE8FF00A1397C /* PolnavViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85657F213CE90000A1397C /* SpeedCameraData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85645B213CE8FF00A1397C /* SpeedCameraData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856580213CE90000A1397C /* PolnavServerProductInfoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85645C213CE8FF00A1397C /* PolnavServerProductInfoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856581213CE90000A1397C /* MapWarrantyData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85645D213CE8FF00A1397C /* MapWarrantyData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856582213CE90000A1397C /* PolnavSDKShell.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85645E213CE8FF00A1397C /* PolnavSDKShell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856583213CE90000A1397C /* DeviceValidInstalledInfoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85645F213CE8FF00A1397C /* DeviceValidInstalledInfoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856584213CE90000A1397C /* PolnavIntersectionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856460213CE8FF00A1397C /* PolnavIntersectionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856585213CE90000A1397C /* MapGeocoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856461213CE8FF00A1397C /* MapGeocoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856586213CE90000A1397C /* PolnavRouteDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856462213CE8FF00A1397C /* PolnavRouteDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856587213CE90000A1397C /* FtsResultData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856463213CE8FF00A1397C /* FtsResultData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856588213CE90000A1397C /* PolnavServerVoiceInfoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856464213CE8FF00A1397C /* PolnavServerVoiceInfoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856589213CE90000A1397C /* TurnInfoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856465213CE8FF00A1397C /* TurnInfoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85658A213CE90000A1397C /* CaptureNaviImageRequestData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856466213CE8FF00A1397C /* CaptureNaviImageRequestData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85658B213CE90000A1397C /* TripInfoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856467213CE8FF00A1397C /* TripInfoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85658C213CE90000A1397C /* FtsSubRegionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856468213CE8FF00A1397C /* FtsSubRegionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85658D213CE90000A1397C /* RoutePlanOptionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856469213CE8FF00A1397C /* RoutePlanOptionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85658E213CE90000A1397C /* PolnavStructData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85646A213CE8FF00A1397C /* PolnavStructData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85658F213CE90000A1397C /* PolnavPoiCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85646B213CE8FF00A1397C /* PolnavPoiCategory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856590213CE90000A1397C /* CountryDriveRuleData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85646C213CE8FF00A1397C /* CountryDriveRuleData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856591213CE90000A1397C /* FtsRegionData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85646D213CE8FF00A1397C /* FtsRegionData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856592213CE90000A1397C /* PolnavLicenseDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85646E213CE8FF00A1397C /* PolnavLicenseDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856593213CE90000A1397C /* PolnavPoiData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E85646F213CE8FF00A1397C /* PolnavPoiData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856594213CE90000A1397C /* PolnavPointRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856470213CE8FF00A1397C /* PolnavPointRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856595213CE90000A1397C /* PolnavServerMapInfoData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856471213CE8FF00A1397C /* PolnavServerMapInfoData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E856596213CE90000A1397C /* PolnavColorData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E856472213CE8FF00A1397C /* PolnavColorData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E85693B213CE9B800A1397C /* PolnavMobile in Resources */ = {isa = PBXBuildFile; fileRef = 8E85693A213CE9B800A1397C /* PolnavMobile */; };
+		8E856975213CEC7F00A1397C /* libPolnavNativeSdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E856973213CEC7E00A1397C /* libPolnavNativeSdk.a */; };
+		8E856977213CEC7F00A1397C /* libPolnavSDKShell.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E856974213CEC7E00A1397C /* libPolnavSDKShell.a */; };
+		8E85AF73219E6F1400B9066C /* PolWrapperDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF0AD8020CD24A50084F488 /* PolWrapperDefine.swift */; };
+		8ED1C2DA20C844B6003C6484 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED1C2D920C844B6003C6484 /* Logger.swift */; };
+		8ED1C2DC20C844E0003C6484 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED1C2DB20C844DF003C6484 /* libc++.tbd */; };
+		8ED1C2DE20C844E7003C6484 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED1C2DD20C844E7003C6484 /* libz.tbd */; };
+		8ED1C2E020C844ED003C6484 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED1C2DF20C844ED003C6484 /* libstdc++.6.0.9.tbd */; };
+		8ED1C2E220C844F7003C6484 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED1C2E120C844F7003C6484 /* OpenGLES.framework */; };
+		8ED1C2E420C844FC003C6484 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED1C2E320C844FC003C6484 /* OpenAL.framework */; };
+		8ED1C2EC20C8452E003C6484 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED1C2EB20C8452E003C6484 /* CoreTelephony.framework */; };
+		8ED1C2F120C84689003C6484 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED1C2E520C84503003C6484 /* SystemConfiguration.framework */; };
+		8ED1C2F220C846B3003C6484 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED1C2E720C84511003C6484 /* GLKit.framework */; };
+		8EF0AD1E20CD215E0084F488 /* PolnavFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EF0AD1320CD215E0084F488 /* PolnavFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EF0AD8220CD24A60084F488 /* NavigationConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF0AD7420CD24A50084F488 /* NavigationConfigure.swift */; };
+		8EF0AD8320CD24A60084F488 /* PolnavManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF0AD7620CD24A50084F488 /* PolnavManager.swift */; };
+		8EF0AD9120CD25440084F488 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED1C2EF20C84680003C6484 /* AVFoundation.framework */; };
+		8EF0AD9220CD255D0084F488 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF0AD8F20CD24FF0084F488 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8E34177920C83E4000B3D6A3 /* PolnavFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PolnavFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E856457213CE8FF00A1397C /* NaviMatrixData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaviMatrixData.h; sourceTree = "<group>"; };
+		8E856458213CE8FF00A1397C /* CaptureData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureData.h; sourceTree = "<group>"; };
+		8E856459213CE8FF00A1397C /* NextTurnCrossInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextTurnCrossInfoData.h; sourceTree = "<group>"; };
+		8E85645A213CE8FF00A1397C /* PolnavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavViewController.h; sourceTree = "<group>"; };
+		8E85645B213CE8FF00A1397C /* SpeedCameraData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedCameraData.h; sourceTree = "<group>"; };
+		8E85645C213CE8FF00A1397C /* PolnavServerProductInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavServerProductInfoData.h; sourceTree = "<group>"; };
+		8E85645D213CE8FF00A1397C /* MapWarrantyData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapWarrantyData.h; sourceTree = "<group>"; };
+		8E85645E213CE8FF00A1397C /* PolnavSDKShell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavSDKShell.h; sourceTree = "<group>"; };
+		8E85645F213CE8FF00A1397C /* DeviceValidInstalledInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceValidInstalledInfoData.h; sourceTree = "<group>"; };
+		8E856460213CE8FF00A1397C /* PolnavIntersectionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavIntersectionData.h; sourceTree = "<group>"; };
+		8E856461213CE8FF00A1397C /* MapGeocoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapGeocoding.h; sourceTree = "<group>"; };
+		8E856462213CE8FF00A1397C /* PolnavRouteDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavRouteDelegate.h; sourceTree = "<group>"; };
+		8E856463213CE8FF00A1397C /* FtsResultData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtsResultData.h; sourceTree = "<group>"; };
+		8E856464213CE8FF00A1397C /* PolnavServerVoiceInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavServerVoiceInfoData.h; sourceTree = "<group>"; };
+		8E856465213CE8FF00A1397C /* TurnInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnInfoData.h; sourceTree = "<group>"; };
+		8E856466213CE8FF00A1397C /* CaptureNaviImageRequestData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureNaviImageRequestData.h; sourceTree = "<group>"; };
+		8E856467213CE8FF00A1397C /* TripInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TripInfoData.h; sourceTree = "<group>"; };
+		8E856468213CE8FF00A1397C /* FtsSubRegionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtsSubRegionData.h; sourceTree = "<group>"; };
+		8E856469213CE8FF00A1397C /* RoutePlanOptionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutePlanOptionData.h; sourceTree = "<group>"; };
+		8E85646A213CE8FF00A1397C /* PolnavStructData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavStructData.h; sourceTree = "<group>"; };
+		8E85646B213CE8FF00A1397C /* PolnavPoiCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavPoiCategory.h; sourceTree = "<group>"; };
+		8E85646C213CE8FF00A1397C /* CountryDriveRuleData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryDriveRuleData.h; sourceTree = "<group>"; };
+		8E85646D213CE8FF00A1397C /* FtsRegionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtsRegionData.h; sourceTree = "<group>"; };
+		8E85646E213CE8FF00A1397C /* PolnavLicenseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavLicenseDelegate.h; sourceTree = "<group>"; };
+		8E85646F213CE8FF00A1397C /* PolnavPoiData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavPoiData.h; sourceTree = "<group>"; };
+		8E856470213CE8FF00A1397C /* PolnavPointRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavPointRecord.h; sourceTree = "<group>"; };
+		8E856471213CE8FF00A1397C /* PolnavServerMapInfoData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavServerMapInfoData.h; sourceTree = "<group>"; };
+		8E856472213CE8FF00A1397C /* PolnavColorData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavColorData.h; sourceTree = "<group>"; };
+		8E85693A213CE9B800A1397C /* PolnavMobile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PolnavMobile; sourceTree = "<group>"; };
+		8E856973213CEC7E00A1397C /* libPolnavNativeSdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPolnavNativeSdk.a; path = "PolnavFramework/Global/PolStarSDK/lib/Release-iphoneos/libPolnavNativeSdk.a"; sourceTree = "<group>"; };
+		8E856974213CEC7E00A1397C /* libPolnavSDKShell.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPolnavSDKShell.a; path = "PolnavFramework/Global/PolStarSDK/lib/Release-iphoneos/libPolnavSDKShell.a"; sourceTree = "<group>"; };
+		8ED1C2D920C844B6003C6484 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		8ED1C2DB20C844DF003C6484 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		8ED1C2DD20C844E7003C6484 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		8ED1C2DF20C844ED003C6484 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		8ED1C2E120C844F7003C6484 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		8ED1C2E320C844FC003C6484 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		8ED1C2E520C84503003C6484 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		8ED1C2E720C84511003C6484 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		8ED1C2E920C8451F003C6484 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8ED1C2EB20C8452E003C6484 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		8ED1C2ED20C84670003C6484 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8ED1C2EF20C84680003C6484 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8EF0AD1320CD215E0084F488 /* PolnavFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PolnavFramework.h; sourceTree = "<group>"; };
+		8EF0AD5920CD22F70084F488 /* SunrayDashboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SunrayDashboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EF0AD7420CD24A50084F488 /* NavigationConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationConfigure.swift; sourceTree = "<group>"; };
+		8EF0AD7620CD24A50084F488 /* PolnavManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolnavManager.swift; sourceTree = "<group>"; };
+		8EF0AD8020CD24A50084F488 /* PolWrapperDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PolWrapperDefine.swift; sourceTree = "<group>"; };
+		8EF0AD8120CD24A50084F488 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EF0AD8F20CD24FF0084F488 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E34177520C83E4000B3D6A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EF0AD9220CD255D0084F488 /* AudioToolbox.framework in Frameworks */,
+				8EF0AD9120CD25440084F488 /* AVFoundation.framework in Frameworks */,
+				8E856975213CEC7F00A1397C /* libPolnavNativeSdk.a in Frameworks */,
+				8ED1C2F220C846B3003C6484 /* GLKit.framework in Frameworks */,
+				8ED1C2F120C84689003C6484 /* SystemConfiguration.framework in Frameworks */,
+				8ED1C2EC20C8452E003C6484 /* CoreTelephony.framework in Frameworks */,
+				8ED1C2E420C844FC003C6484 /* OpenAL.framework in Frameworks */,
+				8ED1C2E220C844F7003C6484 /* OpenGLES.framework in Frameworks */,
+				8ED1C2E020C844ED003C6484 /* libstdc++.6.0.9.tbd in Frameworks */,
+				8E856977213CEC7F00A1397C /* libPolnavSDKShell.a in Frameworks */,
+				8ED1C2DE20C844E7003C6484 /* libz.tbd in Frameworks */,
+				8ED1C2DC20C844E0003C6484 /* libc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E34176F20C83E4000B3D6A3 = {
+			isa = PBXGroup;
+			children = (
+				8E34177B20C83E4000B3D6A3 /* PolnavFramework */,
+				8E34177A20C83E4000B3D6A3 /* Products */,
+				8ED1C29820C83ED0003C6484 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8E34177A20C83E4000B3D6A3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E34177920C83E4000B3D6A3 /* PolnavFramework.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E34177B20C83E4000B3D6A3 /* PolnavFramework */ = {
+			isa = PBXGroup;
+			children = (
+				8EF0AD0820CD215E0084F488 /* Global */,
+				8ED1C2D920C844B6003C6484 /* Logger.swift */,
+			);
+			path = PolnavFramework;
+			sourceTree = "<group>";
+		};
+		8E856455213CE8FF00A1397C /* PolStarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				8E85693A213CE9B800A1397C /* PolnavMobile */,
+				8E856456213CE8FF00A1397C /* inc */,
+			);
+			path = PolStarSDK;
+			sourceTree = "<group>";
+		};
+		8E856456213CE8FF00A1397C /* inc */ = {
+			isa = PBXGroup;
+			children = (
+				8E856457213CE8FF00A1397C /* NaviMatrixData.h */,
+				8E856458213CE8FF00A1397C /* CaptureData.h */,
+				8E856459213CE8FF00A1397C /* NextTurnCrossInfoData.h */,
+				8E85645A213CE8FF00A1397C /* PolnavViewController.h */,
+				8E85645B213CE8FF00A1397C /* SpeedCameraData.h */,
+				8E85645C213CE8FF00A1397C /* PolnavServerProductInfoData.h */,
+				8E85645D213CE8FF00A1397C /* MapWarrantyData.h */,
+				8E85645E213CE8FF00A1397C /* PolnavSDKShell.h */,
+				8E85645F213CE8FF00A1397C /* DeviceValidInstalledInfoData.h */,
+				8E856460213CE8FF00A1397C /* PolnavIntersectionData.h */,
+				8E856461213CE8FF00A1397C /* MapGeocoding.h */,
+				8E856462213CE8FF00A1397C /* PolnavRouteDelegate.h */,
+				8E856463213CE8FF00A1397C /* FtsResultData.h */,
+				8E856464213CE8FF00A1397C /* PolnavServerVoiceInfoData.h */,
+				8E856465213CE8FF00A1397C /* TurnInfoData.h */,
+				8E856466213CE8FF00A1397C /* CaptureNaviImageRequestData.h */,
+				8E856467213CE8FF00A1397C /* TripInfoData.h */,
+				8E856468213CE8FF00A1397C /* FtsSubRegionData.h */,
+				8E856469213CE8FF00A1397C /* RoutePlanOptionData.h */,
+				8E85646A213CE8FF00A1397C /* PolnavStructData.h */,
+				8E85646B213CE8FF00A1397C /* PolnavPoiCategory.h */,
+				8E85646C213CE8FF00A1397C /* CountryDriveRuleData.h */,
+				8E85646D213CE8FF00A1397C /* FtsRegionData.h */,
+				8E85646E213CE8FF00A1397C /* PolnavLicenseDelegate.h */,
+				8E85646F213CE8FF00A1397C /* PolnavPoiData.h */,
+				8E856470213CE8FF00A1397C /* PolnavPointRecord.h */,
+				8E856471213CE8FF00A1397C /* PolnavServerMapInfoData.h */,
+				8E856472213CE8FF00A1397C /* PolnavColorData.h */,
+			);
+			path = inc;
+			sourceTree = "<group>";
+		};
+		8ED1C29820C83ED0003C6484 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E856973213CEC7E00A1397C /* libPolnavNativeSdk.a */,
+				8E856974213CEC7E00A1397C /* libPolnavSDKShell.a */,
+				8EF0AD8F20CD24FF0084F488 /* AudioToolbox.framework */,
+				8EF0AD5920CD22F70084F488 /* SunrayDashboard.framework */,
+				8ED1C2EF20C84680003C6484 /* AVFoundation.framework */,
+				8ED1C2ED20C84670003C6484 /* QuartzCore.framework */,
+				8ED1C2EB20C8452E003C6484 /* CoreTelephony.framework */,
+				8ED1C2E920C8451F003C6484 /* CoreLocation.framework */,
+				8ED1C2E720C84511003C6484 /* GLKit.framework */,
+				8ED1C2E520C84503003C6484 /* SystemConfiguration.framework */,
+				8ED1C2E320C844FC003C6484 /* OpenAL.framework */,
+				8ED1C2E120C844F7003C6484 /* OpenGLES.framework */,
+				8ED1C2DF20C844ED003C6484 /* libstdc++.6.0.9.tbd */,
+				8ED1C2DD20C844E7003C6484 /* libz.tbd */,
+				8ED1C2DB20C844DF003C6484 /* libc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8EF0AD0820CD215E0084F488 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				8E856455213CE8FF00A1397C /* PolStarSDK */,
+				8EF0AD7420CD24A50084F488 /* NavigationConfigure.swift */,
+				8EF0AD7520CD24A50084F488 /* PolnavManager */,
+				8EF0AD8020CD24A50084F488 /* PolWrapperDefine.swift */,
+				8EF0AD1320CD215E0084F488 /* PolnavFramework.h */,
+				8EF0AD8120CD24A50084F488 /* Info.plist */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		8EF0AD7520CD24A50084F488 /* PolnavManager */ = {
+			isa = PBXGroup;
+			children = (
+				8EF0AD7620CD24A50084F488 /* PolnavManager.swift */,
+			);
+			path = PolnavManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8E34177620C83E4000B3D6A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EF0AD1E20CD215E0084F488 /* PolnavFramework.h in Headers */,
+				8E85658C213CE90000A1397C /* FtsSubRegionData.h in Headers */,
+				8E856580213CE90000A1397C /* PolnavServerProductInfoData.h in Headers */,
+				8E85658E213CE90000A1397C /* PolnavStructData.h in Headers */,
+				8E856582213CE90000A1397C /* PolnavSDKShell.h in Headers */,
+				8E856584213CE90000A1397C /* PolnavIntersectionData.h in Headers */,
+				8E856588213CE90000A1397C /* PolnavServerVoiceInfoData.h in Headers */,
+				8E85658B213CE90000A1397C /* TripInfoData.h in Headers */,
+				8E85657E213CE90000A1397C /* PolnavViewController.h in Headers */,
+				8E85657F213CE90000A1397C /* SpeedCameraData.h in Headers */,
+				8E856583213CE90000A1397C /* DeviceValidInstalledInfoData.h in Headers */,
+				8E856586213CE90000A1397C /* PolnavRouteDelegate.h in Headers */,
+				8E856596213CE90000A1397C /* PolnavColorData.h in Headers */,
+				8E85658A213CE90000A1397C /* CaptureNaviImageRequestData.h in Headers */,
+				8E856593213CE90000A1397C /* PolnavPoiData.h in Headers */,
+				8E856591213CE90000A1397C /* FtsRegionData.h in Headers */,
+				8E856585213CE90000A1397C /* MapGeocoding.h in Headers */,
+				8E856587213CE90000A1397C /* FtsResultData.h in Headers */,
+				8E85658D213CE90000A1397C /* RoutePlanOptionData.h in Headers */,
+				8E856594213CE90000A1397C /* PolnavPointRecord.h in Headers */,
+				8E85657C213CE90000A1397C /* CaptureData.h in Headers */,
+				8E85657D213CE90000A1397C /* NextTurnCrossInfoData.h in Headers */,
+				8E85657B213CE90000A1397C /* NaviMatrixData.h in Headers */,
+				8E856581213CE90000A1397C /* MapWarrantyData.h in Headers */,
+				8E856595213CE90000A1397C /* PolnavServerMapInfoData.h in Headers */,
+				8E856590213CE90000A1397C /* CountryDriveRuleData.h in Headers */,
+				8E856592213CE90000A1397C /* PolnavLicenseDelegate.h in Headers */,
+				8E856589213CE90000A1397C /* TurnInfoData.h in Headers */,
+				8E85658F213CE90000A1397C /* PolnavPoiCategory.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8E34177820C83E4000B3D6A3 /* PolnavFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E34178120C83E4000B3D6A3 /* Build configuration list for PBXNativeTarget "PolnavFramework" */;
+			buildPhases = (
+				8E34177420C83E4000B3D6A3 /* Sources */,
+				8E34177520C83E4000B3D6A3 /* Frameworks */,
+				8E34177620C83E4000B3D6A3 /* Headers */,
+				8E34177720C83E4000B3D6A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PolnavFramework;
+			productName = PolnavFramework;
+			productReference = 8E34177920C83E4000B3D6A3 /* PolnavFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E34177020C83E4000B3D6A3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = LeviTsai;
+				TargetAttributes = {
+					8E34177820C83E4000B3D6A3 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 8E34177320C83E4000B3D6A3 /* Build configuration list for PBXProject "PolnavFramework" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8E34176F20C83E4000B3D6A3;
+			productRefGroup = 8E34177A20C83E4000B3D6A3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E34177820C83E4000B3D6A3 /* PolnavFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E34177720C83E4000B3D6A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E85693B213CE9B800A1397C /* PolnavMobile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E34177420C83E4000B3D6A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E85AF73219E6F1400B9066C /* PolWrapperDefine.swift in Sources */,
+				8EF0AD8220CD24A60084F488 /* NavigationConfigure.swift in Sources */,
+				8EF0AD8320CD24A60084F488 /* PolnavManager.swift in Sources */,
+				8ED1C2DA20C844B6003C6484 /* Logger.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8E117AA420E3831E008AE4DB /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Debug Production";
+		};
+		8E117AA520E3831E008AE4DB /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 54685A85RW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/inc";
+				INFOPLIST_FILE = PolnavFramework/Global/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/lib/Release$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/lib/Release-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodoe.PolnavFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug Production";
+		};
+		8E117AA720E38324008AE4DB /* Release Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = "Release Production";
+		};
+		8E117AA820E38324008AE4DB /* Release Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 54685A85RW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/inc";
+				INFOPLIST_FILE = PolnavFramework/Global/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/lib/Release$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/lib/Release-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodoe.PolnavFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release Production";
+		};
+		8E34177F20C83E4000B3D6A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8E34178020C83E4000B3D6A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8E34178220C83E4000B3D6A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 54685A85RW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/inc";
+				INFOPLIST_FILE = PolnavFramework/Global/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/lib/Release$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/lib/Release-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodoe.PolnavFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E34178320C83E4000B3D6A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 54685A85RW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/inc";
+				INFOPLIST_FILE = PolnavFramework/Global/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/lib/Release$(EFFECTIVE_PLATFORM_NAME)",
+					"$(PROJECT_DIR)/PolnavFramework/Global/PolStarSDK/lib/Release-iphoneos",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.noodoe.PolnavFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E34177320C83E4000B3D6A3 /* Build configuration list for PBXProject "PolnavFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E34177F20C83E4000B3D6A3 /* Debug */,
+				8E117AA420E3831E008AE4DB /* Debug Production */,
+				8E34178020C83E4000B3D6A3 /* Release */,
+				8E117AA720E38324008AE4DB /* Release Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E34178120C83E4000B3D6A3 /* Build configuration list for PBXNativeTarget "PolnavFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E34178220C83E4000B3D6A3 /* Debug */,
+				8E117AA520E3831E008AE4DB /* Debug Production */,
+				8E34178320C83E4000B3D6A3 /* Release */,
+				8E117AA820E38324008AE4DB /* Release Production */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E34177020C83E4000B3D6A3 /* Project object */;
+}
