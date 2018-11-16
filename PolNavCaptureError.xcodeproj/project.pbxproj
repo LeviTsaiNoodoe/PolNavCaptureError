@@ -14,6 +14,8 @@
 		8E4357151F5CF66F0000C8AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4357131F5CF66F0000C8AD /* LaunchScreen.storyboard */; };
 		8E4357201F5CF66F0000C8AD /* PolNavCaptureErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43571F1F5CF66F0000C8AD /* PolNavCaptureErrorTests.swift */; };
 		8E43572B1F5CF66F0000C8AD /* PolNavCaptureErrorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E43572A1F5CF66F0000C8AD /* PolNavCaptureErrorUITests.swift */; };
+		8E85AF7A219E96F100B9066C /* PolnavFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E85AF79219E96E700B9066C /* PolnavFramework.framework */; };
+		8E85AF7B219E96F100B9066C /* PolnavFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8E85AF79219E96E700B9066C /* PolnavFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,35 @@
 			remoteGlobalIDString = 8E4357061F5CF66E0000C8AD;
 			remoteInfo = PolNavCaptureError;
 		};
+		8E85AF78219E96E700B9066C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E85AF74219E96E700B9066C /* PolnavFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8E34177920C83E4000B3D6A3;
+			remoteInfo = PolnavFramework;
+		};
+		8E85AF7C219E96F100B9066C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E85AF74219E96E700B9066C /* PolnavFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E34177820C83E4000B3D6A3;
+			remoteInfo = PolnavFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8E85AF7E219E96F100B9066C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8E85AF7B219E96F100B9066C /* PolnavFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8E4357071F5CF66E0000C8AD /* PolNavCaptureError.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PolNavCaptureError.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +77,7 @@
 		8E4357261F5CF66F0000C8AD /* PolNavCaptureErrorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PolNavCaptureErrorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E43572A1F5CF66F0000C8AD /* PolNavCaptureErrorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolNavCaptureErrorUITests.swift; sourceTree = "<group>"; };
 		8E43572C1F5CF66F0000C8AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E85AF74219E96E700B9066C /* PolnavFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PolnavFramework.xcodeproj; path = PolnavFramework/PolnavFramework.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E85AF7A219E96F100B9066C /* PolnavFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +129,7 @@
 		8E4357091F5CF66E0000C8AD /* PolNavCaptureError */ = {
 			isa = PBXGroup;
 			children = (
+				8E85AF74219E96E700B9066C /* PolnavFramework.xcodeproj */,
 				8E43570A1F5CF66E0000C8AD /* AppDelegate.swift */,
 				8E43570C1F5CF66F0000C8AD /* ViewController.swift */,
 				8E43570E1F5CF66F0000C8AD /* Main.storyboard */,
@@ -125,6 +158,14 @@
 			path = PolNavCaptureErrorUITests;
 			sourceTree = "<group>";
 		};
+		8E85AF75219E96E700B9066C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E85AF79219E96E700B9066C /* PolnavFramework.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +176,12 @@
 				8E4357031F5CF66E0000C8AD /* Sources */,
 				8E4357041F5CF66E0000C8AD /* Frameworks */,
 				8E4357051F5CF66E0000C8AD /* Resources */,
+				8E85AF7E219E96F100B9066C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8E85AF7D219E96F100B9066C /* PBXTargetDependency */,
 			);
 			name = PolNavCaptureError;
 			productName = PolNavCaptureError;
@@ -218,6 +261,12 @@
 			mainGroup = 8E4356FE1F5CF66E0000C8AD;
 			productRefGroup = 8E4357081F5CF66E0000C8AD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8E85AF75219E96E700B9066C /* Products */;
+					ProjectRef = 8E85AF74219E96E700B9066C /* PolnavFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8E4357061F5CF66E0000C8AD /* PolNavCaptureError */,
@@ -226,6 +275,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8E85AF79219E96E700B9066C /* PolnavFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = PolnavFramework.framework;
+			remoteRef = 8E85AF78219E96E700B9066C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8E4357051F5CF66E0000C8AD /* Resources */ = {
@@ -292,6 +351,11 @@
 			isa = PBXTargetDependency;
 			target = 8E4357061F5CF66E0000C8AD /* PolNavCaptureError */;
 			targetProxy = 8E4357271F5CF66F0000C8AD /* PBXContainerItemProxy */;
+		};
+		8E85AF7D219E96F100B9066C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PolnavFramework;
+			targetProxy = 8E85AF7C219E96F100B9066C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -425,12 +489,14 @@
 		8E4357301F5CF66F0000C8AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 78H2ULPW55;
+				DEVELOPMENT_TEAM = 54685A85RW;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PolNavCaptureError/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Levi.Example.swift.Test.PolNavCaptureError;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kymco.Levi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,12 +506,14 @@
 		8E4357311F5CF66F0000C8AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 78H2ULPW55;
+				DEVELOPMENT_TEAM = 54685A85RW;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PolNavCaptureError/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Levi.Example.swift.Test.PolNavCaptureError;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kymco.Levi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
